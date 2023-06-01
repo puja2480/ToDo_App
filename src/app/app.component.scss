@@ -1,0 +1,91 @@
+
+.heading1{
+    text-align: center;
+    background-color: darken($color: #225456, $amount: 02);
+    margin: 5px 0px 8px 0px;
+    padding: 2px;
+}
+h1{
+    color: white;
+}
+.list-container
+{
+    background-color: #505050;
+    padding: 15px 0 5px 5px;
+}
+.textbox
+{ 
+      padding: 5px 15px;
+      height: 18PX; 
+      font-size: 15PX; 
+}
+#sort{
+    color: white;  
+}
+select{
+    padding: 4px 10px 4px 10px;
+    option{
+        background-color: rgb(35, 34, 34);
+        color: white;
+    }
+}
+button{
+    font-size: 15PX;
+    width: 5%;
+    padding: 5px 12px;
+    border-radius: 2em;
+       &:hover{
+        background-color: rgb(68, 126, 136);
+       }
+}       
+ol{
+       
+    li{
+        background: rgb(238, 238, 238);
+        padding: 1em;
+        margin-right: 10px;
+        width: 20%;
+        height: 100px;
+        margin-bottom: 1em;
+            
+        p{
+            margin: 0;
+            font-size: 1em;
+        }
+    //    .delete{
+
+    //         position: absolute;
+    //         right: 93%;
+    //         bottom: 34em;
+            
+    //     } 
+    
+    }
+}
+table{
+    border: 1px solid black;
+    margin-top: 40px;
+
+    caption{
+        font-size: 30px;
+        margin-bottom: 15px;
+        font-weight: bold;
+    }
+    th, td{
+        border: 1px solid black;
+        text-align: center;
+        padding: 5px 12px;
+        font-size:20px;
+    }
+  }
+.container{
+    background-color: darken($color: #225456, $amount: 02);
+    font-size: 25px;
+    color: white;
+    text-align: center;
+    padding: 0.5em;
+    margin: 5px 0px 8px 0px;
+    a{
+        color: white;
+    }
+}

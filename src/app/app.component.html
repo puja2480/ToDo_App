@@ -1,0 +1,55 @@
+<div class="heading1">
+  <h1> ToDo List </h1>
+</div>
+
+<div class="list-container">
+  <input type="text" [(ngModel)]="taskName" placeholder="Enter Your Task" class="textbox" size="50">&nbsp;
+  <input type="date" [(ngModel)]="taskDate" class="textbox">
+  <br><br>
+  <label id="sort">Sort By: </label>
+  <select (change)="changeSortType($event)">
+    <option></option>
+    <option value="name">Task Name</option>
+    <option value="date">Task Date</option>
+  </select>
+
+  &nbsp;&nbsp;&nbsp;
+  <button (click)="addToList()" class="add">Add</button>
+  &nbsp;&nbsp;&nbsp;
+  <button (click)="Clear()">Clear</button>
+</div>
+
+<div>
+  <table style="width: 50%">
+    <caption>Task List</caption>
+    <tr>
+      <th>SI No.</th>
+      <th>Task</th>
+      <th>Date</th>
+      <th>Update</th>
+      <th>Dalete</th>
+    </tr>
+    <tr *ngFor="let list of completeList; let index=index">
+      <td> {{index+1}} </td>
+      <td> {{list.task}} </td>
+      <td> {{list.enterdate}} </td>
+      <td><button (click)="edit(index)">Update</button></td>
+      <td><button (click)="delete(index)">Delete</button></td>
+    </tr>
+  </table>
+</div>
+<br>
+<div class="container">
+      <a herf="#" routerLink="/">Rating</a>
+</div>
+<!-- <div>
+  <h2>Employees List</h2>
+  <ol *ngIf="completeList">
+    <li *ngFor="let list of completeList; let index=index">
+      <p>Employee Name: {{list.name}}</p><br>
+      <p>Contact Number: {{list.number}}</p>
+      <button (click)="delete(list.id)" class="delete">Delete</button>
+      </li>
+  </ol>
+</div> -->
+<router-outlet></router-outlet>
